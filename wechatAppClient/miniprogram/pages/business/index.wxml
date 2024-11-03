@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="main">
+        <view class="guanggao" style="height:270rpx;background-color: #ffffff;">
+            <swiper current="0" class="guanggao1" autoplay="true" interval="2500" circular="true">
+                <swiper-item>
+                    <!-- 下面测试 -->
+                    <image src="{{ad2}}" mode="aspectFill" style="width:680rpx;height:270rpx;border-radius:10rpx;overflow:hidden;border:thin solid #4B7382;margin-left: 30rpx; margin-right: 30rpx;"></image>
+                    <!-- 上面测试 -->
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="image_container" wx:for="{{postList}}" wx:for-item="item" wx:key="id">
+            <image style="width:680rpx" show-menu-by-longpress='true' src="{{item.images}}" mode="widthFix" />
+        </view>
+    </view>
+</view>

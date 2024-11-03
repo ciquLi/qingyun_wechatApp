@@ -1,0 +1,31 @@
+<view class="guanggao" style="height:270rpx;background-color: #ffffff;">
+            <swiper current="0" class="guanggao1" autoplay="true" interval="2500" circular="true">
+                <swiper-item>
+                    <!-- 下面测试 -->
+                    <image src="{{ad3}}" mode="aspectFill" style="width:680rpx;height:270rpx;border-radius:10rpx;overflow:hidden;border:thin solid #4B7382;margin-left: 30rpx; margin-right: 30rpx;"></image>
+                    <!-- 上面测试 -->
+                </swiper-item>
+            </swiper>
+        </view>
+
+<view class="container">
+<view class="main">
+      <view class="B" wx:for="{{news}}" wx:key="index" wx:for-item="item0" wx:for-index="index0" >
+          <!-- B1为头像 -->
+          <view  class="B1" data-nr="{{item0.content}}">
+              <image  class="photo" src="/images/icons/avatar.png" mode="widthFix"></image>
+          </view>
+          <!-- B2为其他内容 -->
+          <view class="B2">
+              <!-- 第一部分 -->
+              <view class="B21">
+                  <view class="name" style="font-size:100%;margin-top:5rpx;color:#5566A3;font-weight:600">
+                      {{item0.title}}
+                  </view>
+              </view>
+              <!-- 第二部分 -->
+              <view class="B22"><text user-select> {{item0.content}} </text></view>
+          </view>
+      </view>
+</view>
+</view>

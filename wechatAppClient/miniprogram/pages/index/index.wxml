@@ -1,0 +1,62 @@
+
+<view class="container">
+    <view class="main">
+        <view class="guanggao" style="height:270rpx;background-color: #ffffff;">
+            <swiper current="0" class="guanggao1" autoplay="true" interval="2500" circular="true" >
+                <swiper-item>
+                    <!-- 下面测试 -->
+                    <image src="{{ad1}}" mode="aspectFill" style="width:680rpx;height:270rpx;border-radius:10rpx;overflow:hidden;border:thin solid #4B7382;margin-left: 30rpx; margin-right: 30rpx;"></image>
+                    <!-- 上面测试 -->
+                </swiper-item>
+            </swiper>
+        </view>
+        <!-- <view >
+            <text> 放假时间</text>
+        </view> -->
+        
+        <view class="ability_container" style="margin-left: 30rpx; margin-right: 30rpx;">
+          <block wx:for="{{urls}}" wx:key="title">
+            <view 
+              class="link-text" 
+              data-url="{{item.url}}" 
+              bindtap="navigateToWebview"
+            >
+              {{item.title}}
+            </view>
+          </block>
+
+            <!-- <view class="ability_title">消息通知：</view> -->
+            <view class="ability_item" wx:for="{{knowledgePoints}}" wx:for-item="point" wx:key="id">
+                <text user-select>🌂{{point.title}}</text>
+            </view>
+            <!-- <web-view src="https://mp.weixin.qq.com/s/HNOnkuBoXjBzOUcW4caVaw"></web-view> -->
+            <!-- <view class="link-text" bindtap="navigateToArticle">点击查看公众号文章</view> -->
+        </view>
+ 
+        
+        <!-- <view class="" style="margin-left: 30rpx; margin-right: 30rpx; margin-top: 30rpx;">
+          <view class="ability_title">图片资讯</view>
+        </view> -->
+        <swiper
+          indicator-dots="true"
+          autoplay="true"
+          interval="5000"
+          duration="1000"
+          circular="true"
+          style="margin-left: 30rpx; margin-right: 30rpx; width: 680rpx;height:1000rpx" 
+          class="image_container"
+        >
+          <block wx:for="{{postList}}" wx:for-item="item" wx:key="id">
+            <swiper-item  style="height:auto;">
+              <image 
+                style="width: 100%;height: 100%;"
+                show-menu-by-longpress="true" 
+                src="{{item.images}}" 
+                mode="widthFix" 
+              />
+            </swiper-item>
+          </block>
+        </swiper>
+        
+    </view>
+</view>
