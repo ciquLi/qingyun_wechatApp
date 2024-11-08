@@ -82,7 +82,7 @@ Page({
                     ad1: res.data[0].ad1,
                     postList: array,
                     postList_xshd: array_xshd,
-                    postList_sthd: array_xshd,
+                    postList_sthd: array_sthd,
                     urls: res.data[0].urls
                 })
                 // app.glids = res.data[0].system.glids
