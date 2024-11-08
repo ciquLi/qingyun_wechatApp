@@ -25,7 +25,9 @@ Page({
           {title: '校内班车', url: 'https://mp.weixin.qq.com/s/DxQTlX8opd7A0jhcJT43zQ'}
         ],
         ad1: null,
-        postList: []
+        postList: [],
+        postList_xshd: [],
+        postList_sthd: []
     },
 
     onLoad: function (options) {
@@ -58,9 +60,29 @@ Page({
                     });
                 }
 
+                var len = res.data[0].postList_xshd.length
+                console.log(len)
+                var array_xshd = []
+                for (var i = 0; i < len; i++) {
+                    array_xshd.push({
+                        "images": res.data[0].postList_xshd[i]
+                    });
+                }
+
+                var len = res.data[0].postList_sthd.length
+                console.log(len)
+                var array_sthd = []
+                for (var i = 0; i < len; i++) {
+                    array_sthd.push({
+                        "images": res.data[0].postList_sthd[i]
+                    });
+                }
+
                 this.setData({
                     ad1: res.data[0].ad1,
                     postList: array,
+                    postList_xshd: array_xshd,
+                    postList_sthd: array_xshd,
                     urls: res.data[0].urls
                 })
                 // app.glids = res.data[0].system.glids

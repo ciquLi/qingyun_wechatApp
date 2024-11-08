@@ -40,11 +40,11 @@ page {
     margin-top: 32rpx;
 }
 
-.ability_title {
+/* .ability_title {
     font-size: 36rpx;
     font-weight: 500;
-    color: #000;
-}
+    color: rgb(61, 11, 240);
+} */
 
 .ability_item {
     color: rgba(0, 0, 0, 0.6);
@@ -60,12 +60,41 @@ page {
 }
 
 
-/* .ability_item::before {
-    content: "";
-    display: inline-block;
-    width: 12rpx;
-    height: 12rpx;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-right: 12rpx;
-} */
+/* 外层视图样式 */
+.view-container {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+
+/* 标题样式 */
+.ability_title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5809eb;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+/* 轮播图容器样式 */
+.image_container {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: 680rpx;
+  height: 1000rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+/* 单个轮播图项样式 */
+swiper-item {
+  height: auto;
+}
+
+/* 图片样式 */
+.image_container image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15rpx;
+}
